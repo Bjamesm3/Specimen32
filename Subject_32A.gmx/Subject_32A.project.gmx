@@ -13,14 +13,17 @@
     <sprite>sprites\Shooter_Stand_CQ_L</sprite>
     <sprite>sprites\Shooter_Stand_CQ_R</sprite>
     <sprite>sprites\Wall</sprite>
+    <sprite>sprites\Door</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\wall_obj</object>
+    <object>objects\Man</object>
+    <object>objects\Door_obj</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
