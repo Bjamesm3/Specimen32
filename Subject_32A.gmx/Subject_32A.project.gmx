@@ -14,6 +14,7 @@
     <sprite>sprites\Shooter_Stand_CQ_R</sprite>
     <sprite>sprites\Wall</sprite>
     <sprite>sprites\Door</sprite>
+    <sprite>sprites\bullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -21,6 +22,7 @@
     <object>objects\wall_obj</object>
     <object>objects\Man</object>
     <object>objects\Door_obj</object>
+    <object>objects\bullet_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

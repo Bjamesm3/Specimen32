@@ -11,17 +11,27 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>500</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
         <functionname></functionname>
-        <codestring>draw_self();</codestring>
+        <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_angle = point_direction(x, y, mouse_x, mouse_y);
+Ammo = 55;
+LenX = 28;
+LenY = 1;
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
@@ -80,7 +90,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y -= 5;
+            <string>y -= 3;
 </string>
           </argument>
         </arguments>
@@ -103,7 +113,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y += 5;
+            <string>y += 3;
 </string>
           </argument>
         </arguments>
@@ -126,7 +136,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x += 5;
+            <string>x += 3;
 </string>
           </argument>
         </arguments>
@@ -149,7 +159,37 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x -= 5;
+            <string>x -= 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(Ammo &gt; 0)
+{
+    Ammo -= 1;
+    var bullet_id;
+    bullet_id = instance_create(x + lengthdir_x(LenX, image_angle) - lengthdir_y(LenY, image_angle), y + lengthdir_y(LenX, image_angle) + lengthdir_x(LenY, image_angle), bullet_obj);
+    bullet_id.direction = image_angle;
+    bullet_id.image_angle = bullet_id.direction;
+}
 </string>
           </argument>
         </arguments>
