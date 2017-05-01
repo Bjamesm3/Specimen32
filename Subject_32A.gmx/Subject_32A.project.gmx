@@ -20,7 +20,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\wall_obj</object>
-    <object>objects\Man</object>
+    <object>objects\Player</object>
     <object>objects\Door_obj</object>
     <object>objects\bullet_obj</object>
   </objects>
