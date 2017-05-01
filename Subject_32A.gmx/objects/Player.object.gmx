@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_angle = point_direction(x, y, mouse_x, mouse_y);
-Ammo = 55;
+global.Ammo = 55;
 LenX = 28;
 LenY = 1;
 
@@ -55,28 +55,45 @@ timer = 40;
             <kind>1</kind>
             <string>image_angle = point_direction(x, y, mouse_x, mouse_y);
 
-timer -= 1;
+//sprite change while moving
+if(keyboard_check_pressed('A') || keyboard_check_pressed('S') 
+            || keyboard_check_pressed('W') || keyboard_check_pressed('D'))
+{
+    timer -= 1;
 
-if(timer == 0)
-{
-    timer = 40
-}
-if(timer == 30)
-{
-   sprite_index = shooter_stand_p_R
-}
-else if(timer == 20)
-{
-    sprite_index = Shooter_Standing_pistol
-}
-else if(timer == 10)
-{
-    sprite_index = Shooter_Stand_p_L
-}
-else
-{
-    sprite_index = Shooter_Standing_pistol
+    if(timer == 0)
+    {
+        timer = 40
+    }
+    if(timer &lt; 40 &amp;&amp; timer &gt; 30)
+    {
+    sprite_index = shooter_stand_p_R
+    draw_sprite(shooter_stand_p_R, 0, x, y)
+    }
+    else if(timer &lt; 30 &amp;&amp; timer &gt; 20 )
+    {
+        sprite_index = Shooter_Standing_pistol
+        draw_sprite(Shooter_Standing_pistol, 0, x, y)
+    }
+    else if(timer &lt; 20 &amp;&amp; timer &gt; 10)
+    {
+        sprite_index = Shooter_Stand_p_L
+        draw_sprite(Shooter_Stand_p_L, 0, x, y)
+    }
+    else
+    {
+        sprite_index = Shooter_Standing_pistol
+        draw_sprite(Shooter_Standing_pistol, 0, x, y)
+    }
 } 
+//sprite idle
+else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
+        &amp;&amp; keyboard_check_released('W') &amp;&amp; keyboard_check_released('D') &amp;&amp; image_speed = 0)
+{
+    sprite_index = Shooter_Standing_pistol
+    draw_sprite(Shooter_Standing_pistol, 0, x, y)
+}
+
 </string>
           </argument>
         </arguments>
@@ -198,7 +215,7 @@ else
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="50">
+    <event eventtype="6" enumb="56">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -215,14 +232,106 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(Ammo &gt; 0)
+            <string>if(global.Ammo &gt; 0)
 {
-    Ammo -= 1;
+    global.Ammo -= 1;
     var bullet_id;
     bullet_id = instance_create(x + lengthdir_x(LenX, image_angle) - lengthdir_y(LenY, image_angle), y + lengthdir_y(LenX, image_angle) + lengthdir_x(LenY, image_angle), bullet_obj);
     bullet_id.direction = image_angle;
     bullet_id.image_angle = bullet_id.direction;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="83">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="68">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="65">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed = 0;
 </string>
           </argument>
         </arguments>

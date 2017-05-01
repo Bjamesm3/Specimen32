@@ -23,6 +23,7 @@
     <object>objects\Player</object>
     <object>objects\Door_obj</object>
     <object>objects\bullet_obj</object>
+    <object>objects\controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
