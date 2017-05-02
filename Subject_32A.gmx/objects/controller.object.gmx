@@ -40,6 +40,15 @@ global.MG_Ammo = 12;
 //Gun damage
 global.pistol_damage = 5;
 global.mg_damage = 12;
+
+//HEALTH
+
+//door health
+global.door_hp = 25;
+global.scientist_hp = 5;
+global.soldier_hp = 25;
+global.robot_hp = 100;
+global.crate_hp = 25;
 </string>
           </argument>
         </arguments>
