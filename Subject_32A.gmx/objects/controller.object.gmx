@@ -32,6 +32,7 @@ global.crouching = false;
 //gun
 global.pistol = true;
 global.machineGun = false;
+global.punch = false;
 
 //ammo
 global.Pistol_Ammo = 55;
@@ -44,11 +45,11 @@ global.mg_damage = 12;
 //HEALTH
 
 //door health
-global.door_hp = 25;
-global.scientist_hp = 5;
-global.soldier_hp = 25;
-global.robot_hp = 100;
-global.crate_hp = 25;
+global.max_door_hp = 30;
+global.max_scientist_hp = 10;
+global.max_soldier_hp = 45;
+global.max_robot_hp = 100;
+global.max_crate_hp = 30;
 </string>
           </argument>
         </arguments>

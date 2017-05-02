@@ -31,6 +31,7 @@ LenX = 28;
 LenY = 1;
 
 timer = 40;
+timer1 = 8;
 </string>
           </argument>
         </arguments>
@@ -129,7 +130,7 @@ if(global.moving)
     }
     
     //PISTOL SPRITES
-    if(global.pistol == true)
+    if(global.pistol == true )
     {
          if(timer &lt; 40 &amp;&amp; timer &gt; 30)
          {
@@ -175,6 +176,7 @@ if(global.moving)
               sprite_index = Shooter_Stand_CQ
               draw_sprite(Shooter_Stand_CQ, 0, x, y)
         }
+
     }
 } 
 //
@@ -372,6 +374,7 @@ global.moving = true;
             <kind>1</kind>
             <string>global.pistol = false;
 global.machineGun = true;
+global.punch = false;
 </string>
           </argument>
         </arguments>
@@ -396,6 +399,7 @@ global.machineGun = true;
             <kind>1</kind>
             <string>global.pistol = true;
 global.machineGun = false;
+global.punch = false;
 </string>
           </argument>
         </arguments>
@@ -427,6 +431,7 @@ if(alarm[1] == -1 &amp;&amp; global.machineGun == true)
 {
     alarm[1] = 3;
 }
+
 </string>
           </argument>
         </arguments>

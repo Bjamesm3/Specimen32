@@ -7,6 +7,8 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\Shooter_Standing_pistol</sprite>
+    <sprite>sprites\Shooter_punch_hit</sprite>
+    <sprite>sprites\Shooter_punch_wind</sprite>
     <sprite>sprites\shooter_stand_p_R</sprite>
     <sprite>sprites\Shooter_crouch_P</sprite>
     <sprite>sprites\Shooter_Stand_p_L</sprite>
@@ -16,7 +18,12 @@
     <sprite>sprites\Shooter_Stand_CQ_R</sprite>
     <sprite>sprites\Wall</sprite>
     <sprite>sprites\Door</sprite>
+    <sprite>sprites\Door_12</sprite>
     <sprite>sprites\bullet</sprite>
+    <sprite>sprites\Crate_44</sprite>
+    <sprite>sprites\Crate_34</sprite>
+    <sprite>sprites\Crate_12</sprite>
+    <sprite>sprites\Crate_14</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -27,6 +34,7 @@
     <object>objects\P_bullet_obj</object>
     <object>objects\MG_bullet_obj</object>
     <object>objects\controller</object>
+    <object>objects\Crate</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
