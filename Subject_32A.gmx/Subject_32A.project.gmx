@@ -8,9 +8,11 @@
   <sprites name="sprites">
     <sprite>sprites\Shooter_Standing_pistol</sprite>
     <sprite>sprites\shooter_stand_p_R</sprite>
+    <sprite>sprites\Shooter_crouch_P</sprite>
     <sprite>sprites\Shooter_Stand_p_L</sprite>
-    <sprite>sprites\Shooter_Standing__cqb</sprite>
+    <sprite>sprites\Shooter_Stand_CQ</sprite>
     <sprite>sprites\Shooter_Stand_CQ_L</sprite>
+    <sprite>sprites\Shooter_crouch_CQ</sprite>
     <sprite>sprites\Shooter_Stand_CQ_R</sprite>
     <sprite>sprites\Wall</sprite>
     <sprite>sprites\Door</sprite>
@@ -22,7 +24,8 @@
     <object>objects\wall_obj</object>
     <object>objects\Player</object>
     <object>objects\Door_obj</object>
-    <object>objects\bullet_obj</object>
+    <object>objects\P_bullet_obj</object>
+    <object>objects\MG_bullet_obj</object>
     <object>objects\controller</object>
   </objects>
   <rooms name="rooms">
