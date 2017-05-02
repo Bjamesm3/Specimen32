@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_angle = point_direction(x, y, mouse_x, mouse_y);
-global.Ammo = 55;
+
 LenX = 28;
 LenY = 1;
 
@@ -56,8 +56,7 @@ timer = 40;
             <string>image_angle = point_direction(x, y, mouse_x, mouse_y);
 
 //sprite change while moving
-if(keyboard_check_pressed('A') || keyboard_check_pressed('S') 
-            || keyboard_check_pressed('W') || keyboard_check_pressed('D'))
+if(global.moving)
 {
     timer -= 1;
 
@@ -87,8 +86,7 @@ if(keyboard_check_pressed('A') || keyboard_check_pressed('S')
     }
 } 
 //sprite idle
-else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
-        &amp;&amp; keyboard_check_released('W') &amp;&amp; keyboard_check_released('D') &amp;&amp; image_speed = 0)
+else
 {
     sprite_index = Shooter_Standing_pistol
     draw_sprite(Shooter_Standing_pistol, 0, x, y)
@@ -134,7 +132,7 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
             <kind>1</kind>
             <string>y -= 3;
 
-
+global.moving = true;
 </string>
           </argument>
         </arguments>
@@ -159,7 +157,7 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
             <kind>1</kind>
             <string>y += 3;
 
-
+global.moving = true;
 </string>
           </argument>
         </arguments>
@@ -184,6 +182,7 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
             <kind>1</kind>
             <string>x += 3;
 
+global.moving = true;
 
 </string>
           </argument>
@@ -209,7 +208,7 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
             <kind>1</kind>
             <string>x -= 3;
 
-
+global.moving = true;
 </string>
           </argument>
         </arguments>
@@ -232,9 +231,9 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.Ammo &gt; 0)
+            <string>if(global.Pistol_Ammo &gt; 0)
 {
-    global.Ammo -= 1;
+    global.Pistol_Ammo -= 1;
     var bullet_id;
     bullet_id = instance_create(x + lengthdir_x(LenX, image_angle) - lengthdir_y(LenY, image_angle), y + lengthdir_y(LenX, image_angle) + lengthdir_x(LenY, image_angle), bullet_obj);
     bullet_id.direction = image_angle;
@@ -263,6 +262,8 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+
+global.moving = false;
 </string>
           </argument>
         </arguments>
@@ -286,6 +287,8 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+
+global.moving = false;
 </string>
           </argument>
         </arguments>
@@ -309,6 +312,8 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+
+global.moving = false;
 </string>
           </argument>
         </arguments>
@@ -332,6 +337,8 @@ else if(keyboard_check_released('A') &amp;&amp; keyboard_check_released('S')
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+
+global.moving = false;
 </string>
           </argument>
         </arguments>
