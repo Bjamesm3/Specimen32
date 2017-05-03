@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = point_direction(x, y, mouse_x, mouse_y);
+            <string>/*
+high health
+can shoot pistol or machine gun
+Has to pick up machine gun before use
+can pick up health, ammo, and key card
+can crouch 
+*/
+
+image_angle = point_direction(x, y, mouse_x, mouse_y);
 
 LenX = 28;
 LenY = 1;

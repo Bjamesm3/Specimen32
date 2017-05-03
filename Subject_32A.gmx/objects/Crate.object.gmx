@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 30;
+            <string>/*
+low health
+can be destroyed by enemy bullets
+can be used as cover by player and shot through to kill enemies while protected
+*/
+hp = 30;
 </string>
           </argument>
         </arguments>
