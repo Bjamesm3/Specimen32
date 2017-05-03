@@ -24,6 +24,10 @@
     <sprite>sprites\Crate_34</sprite>
     <sprite>sprites\Crate_12</sprite>
     <sprite>sprites\Crate_14</sprite>
+    <sprite>sprites\Scientist_idle</sprite>
+    <sprite>sprites\Scientist_Cower</sprite>
+    <sprite>sprites\Scientist_R</sprite>
+    <sprite>sprites\Scientist_L</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -35,6 +39,7 @@
     <object>objects\MG_bullet_obj</object>
     <object>objects\controller</object>
     <object>objects\Crate</object>
+    <object>objects\Scientist_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
