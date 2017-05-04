@@ -7,15 +7,18 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\Shooter_Standing_pistol</sprite>
-    <sprite>sprites\Shooter_punch_hit</sprite>
-    <sprite>sprites\Shooter_punch_wind</sprite>
-    <sprite>sprites\shooter_stand_p_R</sprite>
+    <sprite>sprites\Enemy_P_idle</sprite>
+    <sprite>sprites\Enemy_P_R</sprite>
+    <sprite>sprites\Enemy_P_L</sprite>
     <sprite>sprites\Shooter_crouch_P</sprite>
     <sprite>sprites\Shooter_Stand_p_L</sprite>
     <sprite>sprites\Shooter_Stand_CQ</sprite>
+    <sprite>sprites\Enemy_MG_Idle</sprite>
     <sprite>sprites\Shooter_Stand_CQ_L</sprite>
+    <sprite>sprites\Enemy_MG_L</sprite>
     <sprite>sprites\Shooter_crouch_CQ</sprite>
     <sprite>sprites\Shooter_Stand_CQ_R</sprite>
+    <sprite>sprites\Enemy_MG_R</sprite>
     <sprite>sprites\Wall</sprite>
     <sprite>sprites\Door</sprite>
     <sprite>sprites\Door_12</sprite>
