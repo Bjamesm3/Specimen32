@@ -114,7 +114,7 @@ if(hp &lt; 1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.punch == true &amp;&amp; hp &lt; 15)
+            <string>if(global.kc == true)
 {
     instance_destroy();
 }

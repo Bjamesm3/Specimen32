@@ -37,6 +37,7 @@ motion_add(random(360), 2); //movement
 move = false;
 cower = true;
 timer = 40; //used for sprite change
+can_see = false; //to spot player
 
 
 </string>
@@ -61,7 +62,41 @@ timer = 40; //used for sprite change
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>//alerted
+//
+if(global.alert == true)
+{
+    cower = true;
+}
+//
+//cone of vision
+//
+//set Cone
+
+coneOfSightLeft = 45;
+coneOfSightRight = -45;
+coneLeft = (image_angle+coneOfSightLeft) mod 360;
+coneRight = (image_angle+coneOfSightRight+360) mod 360;
+    
+coneOfSightLength = 100; // Change to whatever.
+draw_triangle(x, y, x+lengthdir_x(coneOfSightLength,coneLeft), y+lengthdir_y(coneOfSightLength,coneLeft), x+lengthdir_x(coneOfSightLength,coneRight), y+lengthdir_y(coneOfSightLength,coneRight), false);
+
+
+//cone of vision
+var inst = instance_nearest(x, y, Player);
+if instance_exists(inst)
+{
+     
+   if ( point_in_triangle(inst.x, inst.y, x, y, x+lengthdir_x(coneOfSightLength,coneLeft), y+lengthdir_y(coneOfSightLength,coneLeft), x+lengthdir_x(coneOfSightLength,coneRight), y+lengthdir_y(coneOfSightLength,coneRight) ))
+   {
+      can_see = true;
+      global.alert = true; //all enemies aware
+   }
+}
+//
+//
+//
+//movement
 if(cower == false &amp;&amp; move == true) //normal movement
 {
         timer -= 1;
@@ -116,30 +151,6 @@ else //COWering or Idle
     <event eventtype="4" ename="Door_obj">
       <action>
         <libid>1</libid>
-        <id>115</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -154,7 +165,8 @@ else //COWering or Idle
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = direction;
+            <string>
+image_angle = direction;
 </string>
           </argument>
         </arguments>
@@ -163,30 +175,6 @@ else //COWering or Idle
     <event eventtype="4" ename="wall_obj">
       <action>
         <libid>1</libid>
-        <id>115</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -201,7 +189,8 @@ else //COWering or Idle
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = direction;
+            <string>
+image_angle = direction;
 </string>
           </argument>
         </arguments>
