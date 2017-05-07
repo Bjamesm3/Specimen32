@@ -55,7 +55,8 @@ timer = 40;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//set Cone
+            <string>/*
+//set Cone
 
 coneOfSightLeft = 45;
 coneOfSightRight = -45;
@@ -76,7 +77,7 @@ if instance_exists(inst)
       can_see = true;
       global.alert = true; //all enemies aware
    }
-}
+}*/
 
 
 //if alert true 
@@ -119,6 +120,13 @@ timer -= 1;
               draw_sprite(Enemy_P_idle, 0, x, y)
         }
     }
+    
+//ALERTED
+
+//if(glboal.alert == true)
+//{
+    //walk towards player and shoot
+//}
 </string>
           </argument>
         </arguments>

@@ -32,14 +32,28 @@ moves randomnly
 if alerted, cowers
 */
 
+
+
 hp = global.max_scientist_hp;
-motion_add(random(360), 2); //movement
-move = false;
-cower = true;
+moveIndex = random(2);
+move = true;
+cower = false;
 timer = 40; //used for sprite change
 can_see = false; //to spot player
 
-
+// path
+if(moveIndex == 1)
+{
+    path_start(path1, 1, path_action_continue, false);
+}
+else if(moveIndex == 2)
+{
+    path_start(path2, 1, path_action_continue, false);
+}
+else
+{
+    path_start(path0, 1, path_action_continue, false);
+}
 </string>
           </argument>
         </arguments>
@@ -69,6 +83,7 @@ if(global.alert == true)
     cower = true;
 }
 //
+/*
 //cone of vision
 //
 //set Cone
@@ -93,11 +108,11 @@ if instance_exists(inst)
       global.alert = true; //all enemies aware
    }
 }
-//
+*/
 //
 //
 //movement
-if(cower == false &amp;&amp; move == true) //normal movement
+if(move == true) //normal movement
 {
         timer -= 1;
          if(timer &lt; 40 &amp;&amp; timer &gt; 30)  //changing sprites
@@ -129,9 +144,11 @@ if(cower == false &amp;&amp; move == true) //normal movement
 }
 else //COWering or Idle
 {
-    if(cower == true)
+    if(global.alert == true)
     {
         move = false;
+        cower = true;
+        path_end();
         image_speed = 0;
         sprite_index = Scientist_Cower
         draw_sprite(Scientist_Cower, 0, x, y)

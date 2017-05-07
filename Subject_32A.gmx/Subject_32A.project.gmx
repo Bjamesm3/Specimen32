@@ -33,9 +33,16 @@
     <sprite>sprites\Scientist_R</sprite>
     <sprite>sprites\Scientist_L</sprite>
     <sprite>sprites\keyCard</sprite>
+    <sprite>sprites\Health</sprite>
+    <sprite>sprites\PAmmo</sprite>
+    <sprite>sprites\MGAmmo</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+    <path>paths\path1</path>
+    <path>paths\path2</path>
+  </paths>
   <objects name="objects">
     <object>objects\wall_obj</object>
     <object>objects\Player</object>
