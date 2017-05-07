@@ -28,6 +28,7 @@
             <string>hp = global.max_soldier_hp;
 can_see = false; //to spot player
 timer = 40;
+path_start(path7, 2, path_action_continue, true);
 
 
 
@@ -55,7 +56,8 @@ timer = 40;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
+            <string>image_angle = direction;
+/*
 //set Cone
 
 coneOfSightLeft = 45;

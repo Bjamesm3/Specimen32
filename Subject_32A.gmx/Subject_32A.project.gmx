@@ -39,9 +39,7 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
-    <path>paths\path0</path>
-    <path>paths\path1</path>
-    <path>paths\path2</path>
+    <path>paths\path7</path>
   </paths>
   <objects name="objects">
     <object>objects\wall_obj</object>
