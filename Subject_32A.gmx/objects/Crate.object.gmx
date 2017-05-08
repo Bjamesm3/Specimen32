@@ -36,63 +36,7 @@ hp = 30;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="MG_bullet_obj">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-    hp -= 8
-
-
-if(hp == 30)
-{
-    sprite_index = Crate_44
-    draw_sprite(Crate_44, 0, x, y)
-}
-
-else if(hp &gt; 20 &amp;&amp; hp &lt; 30)
-{
-    sprite_index = Crate_34
-    draw_sprite(Crate_34, 0, x, y)
-}
-
-else if(hp &gt; 10 &amp;&amp; hp &lt; 20)
-{
-    sprite_index = Crate_12
-    draw_sprite(Crate_12, 0, x, y)
-}
-
-else if(hp &gt; 0 &amp;&amp; hp &lt; 10)
-{
-    sprite_index = Crate_14
-    draw_sprite(Crate_14, 0, x, y)
-}
-
-else
-{
-    instance_destroy()
-}
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="P_bullet_obj">
+    <event eventtype="4" ename="Enemy_bullet">
       <action>
         <libid>1</libid>
         <id>603</id>

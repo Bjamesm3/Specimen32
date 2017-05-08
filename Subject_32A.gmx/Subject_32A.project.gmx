@@ -36,6 +36,7 @@
     <sprite>sprites\Health</sprite>
     <sprite>sprites\PAmmo</sprite>
     <sprite>sprites\MGAmmo</sprite>
+    <sprite>sprites\YOUDIED_Spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -57,9 +58,11 @@
     <object>objects\health_obj</object>
     <object>objects\P_ammo_obj</object>
     <object>objects\MG_ammo_obj</object>
+    <object>objects\died</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
+    <room>rooms\room_death</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -41,7 +41,7 @@ global.MG_Ammo = 12;
 //Gun damage
 global.pistol_damage = 5;
 global.mg_damage = 12;
-
+global.enemy_damage = 8;
 //HEALTH
 
 //door health
@@ -84,6 +84,8 @@ global.kc = false;
 draw_text(32, 32, "Pistol: " +string(global.Pistol_Ammo))
 
 draw_text(120, 32, "Machine Gun: " +string(global.MG_Ammo))
+
+draw_text(320, 32, "Health: " +string(Player.hp))
 
 </string>
           </argument>

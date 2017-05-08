@@ -27,12 +27,43 @@
             <kind>1</kind>
             <string>hp = global.max_soldier_hp;
 can_see = false; //to spot player
-timer = 40;
+timer = 40;    //change sprite
 path_start(path7, 2, path_action_continue, true);
+fov_range = 160; //field of view
+target = -1;     //fov stuff
+LenX = 28; //shootting stuff
+LenY = 1;
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//pistol shooting
 
+    var bullet_id;
+    bullet_id = instance_create(x + lengthdir_x(LenX, image_angle) - lengthdir_y(LenY, image_angle), y + lengthdir_y(LenX, image_angle) + lengthdir_x(LenY, image_angle), Enemy_bullet);
+    bullet_id.direction = image_angle;
+    bullet_id.image_angle = bullet_id.direction;
 
 </string>
           </argument>
@@ -57,29 +88,52 @@ path_start(path7, 2, path_action_continue, true);
           <argument>
             <kind>1</kind>
             <string>image_angle = direction;
-/*
-//set Cone
 
-coneOfSightLeft = 45;
-coneOfSightRight = -45;
-coneLeft = (image_angle+coneOfSightLeft) mod 360;
-coneRight = (image_angle+coneOfSightRight+360) mod 360;
-    
-coneOfSightLength = 100; // Change to whatever.
-draw_triangle(x, y, x+lengthdir_x(coneOfSightLength,coneLeft), y+lengthdir_y(coneOfSightLength,coneLeft), x+lengthdir_x(coneOfSightLength,coneRight), y+lengthdir_y(coneOfSightLength,coneRight), true);
-
-
-//cone of vision
-var inst = instance_nearest(x, y, Player);
-if instance_exists(inst)
+//check if dead
+if(hp &lt;= 0)
 {
-     
-   if ( point_in_triangle(inst.x, inst.y, x, y, x+lengthdir_x(coneOfSightLength,coneLeft), y+lengthdir_y(coneOfSightLength,coneLeft), x+lengthdir_x(coneOfSightLength,coneRight), y+lengthdir_y(coneOfSightLength,coneRight) ))
-   {
-      can_see = true;
-      global.alert = true; //all enemies aware
-   }
-}*/
+    instance_destroy();
+}
+//FOV
+player_go_to = instance_nearest(x,y,Player);
+player_x = (player_go_to.x);      //div 32) *32+16;
+player_y = (player_go_to.y);     //div 32) *32+16;
+
+dir = point_direction (x,y,player_x,player_y);
+target = collision_line (x,y,x+lengthdir_x(fov_range,dir),y+lengthdir_y(fov_range,dir),player_go_to,true,true);
+
+if instance_exists (target) &amp;&amp; distance_to_point(player_x,player_y) &lt; fov_range
+{
+    if (not collision_line (x,y,target.x,target.y,wall_obj,true,true) || not collision_line (x,y,target.x,target.y,Door_obj,true,true))
+    {
+        // Determine if a target is within a 120 degree cone of vision.
+        var directionToTarget = point_direction (x, y,player_x,player_y);
+        var angleToTarget = angle_difference (directionToTarget, direction);
+        
+        if (abs (angleToTarget) &lt; 60)    // The target can be seen!
+        {       
+            //Image Angle    
+            can_see = true;
+            global.alert = true;
+            var pd = point_direction(x, y, player_x, player_y);
+            var dd = angle_difference(image_angle, pd);  
+            image_angle -= min(abs(dd), 10) * sign(dd); 
+            path_end();
+            if(alarm[2] == -1)
+            {
+                alarm[2] = 8;
+            }
+        }
+        else 
+        {
+            can_see = false;
+        }
+    }
+} 
+else 
+{
+    can_see = false;
+}
 
 
 //if alert true 
@@ -125,10 +179,58 @@ timer -= 1;
     
 //ALERTED
 
-//if(glboal.alert == true)
-//{
-    //walk towards player and shoot
-//}
+if(global.alert == true)
+{
+     mp_potential_step(player_x, player_y, 3, true);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="MG_bullet_obj">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hp -= global.mg_damage;
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="P_bullet_obj">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hp -= global.pistol_damage;
 </string>
           </argument>
         </arguments>
