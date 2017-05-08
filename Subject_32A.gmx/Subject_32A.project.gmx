@@ -53,6 +53,10 @@
     <object>objects\Enemy_P_obj</object>
     <object>objects\Enemy_MG_obj</object>
     <object>objects\kCard</object>
+    <object>objects\Enemy_bullet</object>
+    <object>objects\health_obj</object>
+    <object>objects\P_ammo_obj</object>
+    <object>objects\MG_ammo_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

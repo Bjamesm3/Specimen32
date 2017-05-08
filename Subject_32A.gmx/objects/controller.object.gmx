@@ -50,6 +50,7 @@ global.max_scientist_hp = 10;
 global.max_soldier_hp = 45;
 global.max_robot_hp = 100;
 global.max_crate_hp = 30;
+global.max_player_hp = 100;
 
 //alarm
 global.alert = false;
