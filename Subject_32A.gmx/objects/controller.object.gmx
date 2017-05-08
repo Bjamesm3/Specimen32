@@ -56,7 +56,7 @@ global.max_player_hp = 100;
 global.alert = false;
 
 //key card in posession
-global.kC = false;
+global.kc = false;
 </string>
           </argument>
         </arguments>

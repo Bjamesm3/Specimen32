@@ -46,6 +46,47 @@ can_see = false; //to spot player
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//movement
+
+if( place_empty(x, y-5))
+{
+    y -=5;
+}
+else if( place_empty(x, y+5))
+{
+    y +=5;
+}
+else if( place_empty(x-5, y))
+{
+    x -= 5;
+}
+else if( place_empty(x+5, y))
+{
+    x +=5;
+}
+image_angle = direction;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -69,25 +110,6 @@ if(global.alert == true)
 {
     cower = true;
 }
-if(timer % 10 == 0)
-{
-    direction += 10%360;
-    if(timer%3 == 0)
-    {
-        motion_set(direction, 1);
-    }
-    image_angle = direction;
-}
-else
-{
-    direction -= 10%360;
-    if(timer%4 == 0)
-    {
-        motion_set(direction, 1);
-    }
-    image_angle = direction;
-}
-
 
 //
 /*
@@ -151,6 +173,7 @@ if(move == true) //normal movement
         if(timer = 0)
         {
              timer = 40;
+             alarm[3] = 40;
         }
 
 }

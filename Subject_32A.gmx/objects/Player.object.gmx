@@ -41,7 +41,7 @@ LenY = 1;
 timer = 40;
 timer1 = 8;
 
-hp = global.max_player_hp
+hp = 100
 </string>
           </argument>
         </arguments>
