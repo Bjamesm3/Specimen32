@@ -362,13 +362,14 @@
     <instance objName="MG_ammo_obj" x="512" y="768" name="inst_F563DCE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="P_ammo_obj" x="608" y="416" name="inst_4B8E11B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="P_ammo_obj" x="1056" y="64" name="inst_F315E441" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="health_obj" x="736" y="96" name="inst_CEC17312" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="health_obj" x="928" y="448" name="inst_CEC17312" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_obj" x="704" y="0" name="inst_0E17A148" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_obj" x="736" y="0" name="inst_FB9DEC08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_obj" x="768" y="0" name="inst_2C9E97FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="changeRooms1_2" x="1184" y="384" name="inst_8A130FAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="changeRooms1_2" x="1184" y="416" name="inst_3F2757C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="changeRooms1_2" x="1184" y="352" name="inst_2202194A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="MG_ammo_obj" x="544" y="64" name="inst_754433A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
