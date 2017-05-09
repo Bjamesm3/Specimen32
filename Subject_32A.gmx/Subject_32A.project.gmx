@@ -37,9 +37,11 @@
     <sprite>sprites\PAmmo</sprite>
     <sprite>sprites\MGAmmo</sprite>
     <sprite>sprites\YOUDIED_Spr</sprite>
+    <sprite>sprites\Win_spr</sprite>
     <sprite>sprites\Start</sprite>
     <sprite>sprites\Instructions</sprite>
     <sprite>sprites\instructiones</sprite>
+    <sprite>sprites\change</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\MenuBkgd</background>
@@ -66,19 +68,22 @@
     <object>objects\P_ammo_obj</object>
     <object>objects\MG_ammo_obj</object>
     <object>objects\died</object>
+    <object>objects\Win</object>
     <object>objects\start_obj</object>
     <object>objects\instruct</object>
     <object>objects\instructionmenu</object>
     <object>objects\changeRooms1_2</object>
-    <object>objects\ChangeRooms2_1</object>
+    <object>objects\ChangeRooms2_3</object>
+    <object>objects\ChangeToWin</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Menu</room>
     <room>rooms\Game1</room>
     <room>rooms\instr</room>
     <room>rooms\room_death</room>
+    <room>rooms\WinRoom</room>
     <room>rooms\Game2</room>
-    <room>rooms\room5</room>
+    <room>rooms\Game3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

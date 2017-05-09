@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>Game2</room>
+            <room>WinRoom</room>
           </argument>
         </arguments>
       </action>
