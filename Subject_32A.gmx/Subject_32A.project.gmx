@@ -46,6 +46,8 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\path7</path>
+    <path>paths\path8</path>
+    <path>paths\path9</path>
   </paths>
   <objects name="objects">
     <object>objects\wall_obj</object>
@@ -67,12 +69,16 @@
     <object>objects\start_obj</object>
     <object>objects\instruct</object>
     <object>objects\instructionmenu</object>
+    <object>objects\changeRooms1_2</object>
+    <object>objects\ChangeRooms2_1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Menu</room>
     <room>rooms\Game1</room>
     <room>rooms\instr</room>
     <room>rooms\room_death</room>
+    <room>rooms\Game2</room>
+    <room>rooms\room5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
