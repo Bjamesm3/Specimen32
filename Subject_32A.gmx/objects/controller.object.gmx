@@ -80,12 +80,11 @@ global.kc = false;
           <argument>
             <kind>1</kind>
             <string>
+draw_text(32, 32, "Pistol: " + string(global.Pistol_Ammo))
 
-draw_text(32, 32, "Pistol: " +string(global.Pistol_Ammo))
+draw_text(32, 64, "Machine Gun: " + string(global.MG_Ammo))
 
-draw_text(120, 32, "Machine Gun: " +string(global.MG_Ammo))
-
-draw_text(320, 32, "Health: " +string(Player.hp))
+draw_text(32, 96, "Health: " + string(Player.hp))
 
 </string>
           </argument>
