@@ -148,8 +148,6 @@
     <instance objName="health_obj" x="608" y="384" name="inst_6510D111" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="P_ammo_obj" x="64" y="352" name="inst_7D64CAF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="MG_ammo_obj" x="96" y="448" name="inst_473E8068" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Enemy_P_obj" x="448" y="96" name="inst_460F5C20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Enemy_P_obj" x="64" y="64" name="inst_01BD26F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Crate" x="224" y="288" name="inst_74BE3099" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Crate" x="96" y="192" name="inst_10A3807C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Crate" x="96" y="160" name="inst_DE212CB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -170,6 +168,8 @@
     <instance objName="Player" x="288" y="512" name="inst_EDF209AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ChangeRooms2_3" x="672" y="128" name="inst_E55B6713" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ChangeRooms2_3" x="672" y="192" name="inst_DC9517FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Enemy2" x="64" y="64" name="inst_ACDDE868" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Enemy3" x="416" y="64" name="inst_FBFDD1AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

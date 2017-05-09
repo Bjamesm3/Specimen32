@@ -273,9 +273,6 @@
     <instance objName="MG_ammo_obj" x="736" y="672" name="inst_09A787DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="controller" x="960" y="32" name="inst_B619557D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Scientist_obj" x="224" y="224" name="inst_11C7F066" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Enemy_P_obj" x="128" y="64" name="inst_1817F97B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Enemy_P_obj" x="928" y="256" name="inst_0F25AEAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Enemy_P_obj" x="384" y="672" name="inst_2ED0CE66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_obj" x="736" y="0" name="inst_AA719946" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_obj" x="704" y="0" name="inst_905EDAAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_obj" x="672" y="0" name="inst_6518472D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -283,6 +280,9 @@
     <instance objName="Player" x="32" y="480" name="inst_F6EAA5F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ChangeToWin" x="992" y="352" name="inst_1BB3EA58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ChangeToWin" x="992" y="416" name="inst_67F450E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Enemy4" x="64" y="64" name="inst_BF226619" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Enemy5" x="448" y="96" name="inst_0C6D7D8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Enemy6" x="768" y="480" name="inst_FFD5694D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
