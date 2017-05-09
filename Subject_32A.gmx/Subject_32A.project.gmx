@@ -37,8 +37,13 @@
     <sprite>sprites\PAmmo</sprite>
     <sprite>sprites\MGAmmo</sprite>
     <sprite>sprites\YOUDIED_Spr</sprite>
+    <sprite>sprites\Start</sprite>
+    <sprite>sprites\Instructions</sprite>
+    <sprite>sprites\instructiones</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\MenuBkgd</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\path7</path>
   </paths>
@@ -59,9 +64,14 @@
     <object>objects\P_ammo_obj</object>
     <object>objects\MG_ammo_obj</object>
     <object>objects\died</object>
+    <object>objects\start_obj</object>
+    <object>objects\instruct</object>
+    <object>objects\instructionmenu</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
+    <room>rooms\Menu</room>
+    <room>rooms\Game1</room>
+    <room>rooms\instr</room>
     <room>rooms\room_death</room>
   </rooms>
   <help>
