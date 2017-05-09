@@ -283,6 +283,7 @@
     <instance objName="Enemy4" x="64" y="64" name="inst_BF226619" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Enemy5" x="448" y="96" name="inst_0C6D7D8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Enemy6" x="768" y="480" name="inst_FFD5694D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Scientist_obj" x="576" y="384" name="inst_5F57457A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
