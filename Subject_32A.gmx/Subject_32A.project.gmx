@@ -53,6 +53,12 @@
     <path>paths\path10</path>
     <path>paths\path11</path>
     <path>paths\path12</path>
+    <path>paths\path0</path>
+    <path>paths\path1</path>
+    <path>paths\path2</path>
+    <path>paths\path3</path>
+    <path>paths\path4</path>
+    <path>paths\path5</path>
   </paths>
   <objects name="objects">
     <object>objects\wall_obj</object>
@@ -63,6 +69,11 @@
     <object>objects\controller</object>
     <object>objects\Crate</object>
     <object>objects\Scientist_obj</object>
+    <object>objects\Sci1</object>
+    <object>objects\Sci2</object>
+    <object>objects\Sci3</object>
+    <object>objects\Sci5</object>
+    <object>objects\Sci4</object>
     <object>objects\Enemy_P_obj</object>
     <object>objects\Enemy2</object>
     <object>objects\Enemy3</object>

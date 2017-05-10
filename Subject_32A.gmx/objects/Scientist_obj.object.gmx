@@ -33,7 +33,7 @@ if alerted, cowers
 */
 
 
-
+path_start(path0, 2, path_action_continue, true);
 hp = global.max_scientist_hp;
 move = true;
 cower = false;
@@ -76,47 +76,6 @@ can_see = false; //to spot player
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="3">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//movement
-
-if( place_empty(x, y-5))
-{
-    y -=5;
-}
-else if( place_empty(x, y+5))
-{
-    y +=5;
-}
-else if( place_empty(x-5, y))
-{
-    x -= 5;
-}
-else if( place_empty(x+5, y))
-{
-    x +=5;
-}
-image_angle = direction;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -134,47 +93,23 @@ image_angle = direction;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//alerted
-//
-if(global.alert == true)
-{
-    cower = true;
-}
+            <string>image_angle = direction;
 if(hp &lt;= 0)
 {
     instance_destroy();
 }
-//
-/*
-//cone of vision
-//
-//set Cone
 
-coneOfSightLeft = 45;
-coneOfSightRight = -45;
-coneLeft = (image_angle+coneOfSightLeft) mod 360;
-coneRight = (image_angle+coneOfSightRight+360) mod 360;
-    
-coneOfSightLength = 100; // Change to whatever.
-draw_triangle(x, y, x+lengthdir_x(coneOfSightLength,coneLeft), y+lengthdir_y(coneOfSightLength,coneLeft), x+lengthdir_x(coneOfSightLength,coneRight), y+lengthdir_y(coneOfSightLength,coneRight), false);
-
-
-//cone of vision
-var inst = instance_nearest(x, y, Player);
-if instance_exists(inst)
-{
-     
-   if ( point_in_triangle(inst.x, inst.y, x, y, x+lengthdir_x(coneOfSightLength,coneLeft), y+lengthdir_y(coneOfSightLength,coneLeft), x+lengthdir_x(coneOfSightLength,coneRight), y+lengthdir_y(coneOfSightLength,coneRight) ))
-   {
-      can_see = true;
-      global.alert = true; //all enemies aware
-   }
-}
-*/
 //
 //
 //movement
-if(move == true) //normal movement
+if(global.alert == true)
+{
+    path_end();
+    cower = true;
+    sprite_index = Scientist_Cower
+        draw_sprite(Scientist_Cower, 0, x, y)
+}
+else //normal movement
 {
         timer -= 1;
          if(timer &lt; 40 &amp;&amp; timer &gt; 30)  //changing sprites
@@ -206,26 +141,8 @@ if(move == true) //normal movement
         if(timer = 0)
         {
              timer = 40;
-             alarm[3] = 40;
         }
 
-}
-else //COWering or Idle
-{
-    if(global.alert == true)
-    {
-        move = false;
-        cower = true;
-        path_end();
-        image_speed = 0;
-        sprite_index = Scientist_Cower
-        draw_sprite(Scientist_Cower, 0, x, y)
-    }
-    else
-    {
-              sprite_index = Scientist_idle
-              draw_sprite(Scientist_idle, 0, x, y)
-    }
 }
 
 </string>

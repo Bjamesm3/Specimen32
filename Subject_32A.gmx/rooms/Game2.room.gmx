@@ -170,7 +170,7 @@
     <instance objName="ChangeRooms2_3" x="672" y="192" name="inst_DC9517FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Enemy2" x="64" y="64" name="inst_ACDDE868" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Enemy3" x="416" y="64" name="inst_FBFDD1AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Scientist_obj" x="64" y="192" name="inst_F07D622F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Sci3" x="64" y="192" name="inst_7B624B31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
